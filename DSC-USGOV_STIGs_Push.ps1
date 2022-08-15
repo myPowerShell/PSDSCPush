@@ -1,5 +1,4 @@
 ﻿<#
-
 .SYNOPSIS
  Keeping select registry key settings from drifting
  Update LCM settings, so the server can self heal drift
@@ -13,20 +12,16 @@
   Requires  : PowerShell 5
   .EXAMPLE
   ./
-  
-  #>
-
+#>
 
   Configuration USGOVSTIGsDscConfiguration 
   {
     Import-DscResource –ModuleName 'PSDesiredStateConfiguration'
-
     
     Node 'localhost'
     {
 
-    
-     # Configure the LCM
+    # Configure the LCM
      LocalConfigurationManager
      {
          ActionAfterReboot = "ContinueConfiguration"
@@ -52,7 +47,6 @@
 
         }
 
-
        Registry KeepLsaLimitBlankPasswordUse
         {
             Ensure = "Present"
@@ -63,7 +57,6 @@
 
         }
 
-
         Registry KeepLsaSCENoApplyLegacyAuditPolicy
         {
             Ensure = "Present"
@@ -73,6 +66,7 @@
             ValueType = "DWord" 
 
         }
+   
        #USGOV STIGs # WIN2016-058
        Registry LsaCrashOnAuditFail 
         {
@@ -173,7 +167,6 @@
         }
 
 
-
        #USGOV STIGs # WIN2016-112 [Default:NA / Required:1]
        Registry SystemEnableSecureUIAPaths
         {
@@ -241,7 +234,6 @@
 
         }
 
-
       #USGOV STIGs # WIN2016-187 [Default:NA / Required:1]
        Registry SessionManagerSafeDllSearchMode
         {
@@ -252,7 +244,6 @@
             ValueType = "DWord" 
 
         }
-
 
       #USGOV STIGs # WIN2016-192 [Default:NA / Required:0]
        Registry LanmanWorkstationAllowInsecureGuestAuth
@@ -411,14 +402,11 @@ Set-DscLocalConfigurationManager -Path "C:\DSC\USGOVSTIGsConfiguration"
 
 
 <#
-
-
 Get-DscLocalConfigurationManager
 Get-DscConfiguration
 Test-DSCConfiguration
 Get-DSCConfigurationStatus
 Remove-DSCConfigurationDocument -Stage Current
-
 #>
 
 
