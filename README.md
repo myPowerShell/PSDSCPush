@@ -1,2 +1,3 @@
 # PSDSCPush
-PowerShell Desired State Configuration (Push)
+
+PowerShell Desired State Configuration (Push Mode)
