@@ -30,8 +30,7 @@
          RefreshFrequencyMins = 30
          RefreshMode = "Push"
 
-     
-     }
+    }
 
      # OS:Win2K16 | USGOV STIGs testing for "IRS Publication 1075"
      # https://www.irs.gov/privacy-disclosure/computer-security-compliance-references-and-related-topics-2022
