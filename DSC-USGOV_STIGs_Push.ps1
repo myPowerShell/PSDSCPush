@@ -8,7 +8,7 @@
 
  .NOTE
   File Name : DSC-USGOV_STIGs.ps1
-  Author    : myPowerShell
+  Author    : github.com/myPowerShell
   Requires  : PowerShell 5
   .EXAMPLE
   ./
@@ -400,13 +400,7 @@ Start-DscConfiguration -path C:\DSC\USGOVSTIGsConfiguration -Wait -Force -Verbos
 Set-DscLocalConfigurationManager -Path "C:\DSC\USGOVSTIGsConfiguration"
 
 
-<#
-Get-DscLocalConfigurationManager
-Get-DscConfiguration
-Test-DSCConfiguration
-Get-DSCConfigurationStatus
-Remove-DSCConfigurationDocument -Stage Current
-#>
+
 
 
 
