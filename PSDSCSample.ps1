@@ -1,6 +1,6 @@
 ﻿Configuration PSDSCSample            
 {            
-    
+    Import-DscResource –ModuleName 'PSDesiredStateConfiguration'
     Param([String[]]$ComputerName = "localhost")            
     
     Node $ComputerName            
@@ -26,9 +26,8 @@
             ValueType = "Dword"
 
         } 
-        
-   
-        
+       
+           
         Script EnableFirewall            
         {            
             
@@ -60,6 +59,6 @@
     }            
 }            
             
-PSDSCSample -ComputerName Apollo2          
-Start-DscConfiguration -Path C:\Working\PSDSCSample -ComputerName Apollo2 -Wait -Verbose -Force
-Get-DscConfiguration            
+PSDSCSample -ComputerName $ComputerName        
+Start-DscConfiguration -Path C:\DSC\Configurations -ComputerName $ComputerName -Wait -Verbose -Force
+Set-DscLocalConfigurationManager -Path "C:\DSC\Configurations"          

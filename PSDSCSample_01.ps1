@@ -20,7 +20,7 @@
      
      }
 
-     # MSOffice Registry Keys that needs to be kept at desired state for app team
+     # MSOffice Registry Keys that needs to be kept at desired state
         Registry KeepTextUseZeroMaxScanAS 
         {
             Ensure = "Present"
@@ -73,7 +73,7 @@
    }
 
 
-   PSDSCSample01 -output C:\DSC\Configurations
+PSDSCSample01 -output C:\DSC\Configurations
 Start-DscConfiguration -path C:\DSC\Configurations -Wait -Force -Verbose
 
 Set-DscLocalConfigurationManager -Path "C:\DSC\Configurations"
