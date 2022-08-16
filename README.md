@@ -1,4 +1,4 @@
-# PSDSCPush at github.com/MyPowerShell <br/>
+# PowerShell DSC Push at github.com/MyPowerShell <br/>
 
 PowerShell Desired State Configuration (Push Mode) Examples <br/>
 
