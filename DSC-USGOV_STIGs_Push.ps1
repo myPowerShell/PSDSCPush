@@ -1,14 +1,14 @@
 ﻿<#
 .SYNOPSIS
- Keeping select registry key settings from drifting
- Update LCM settings, so the server can self heal drift
+ Keeping select registry key settings from drifting on a Server and 
+ Updating LCM settings, so the server can self heal any drift
 
 .DESCRIPTION
  Using DSC to keep Reg Key Settings
 
  .NOTE
   File Name : DSC-USGOV_STIGs.ps1
-  Author    : 
+  Author    : myPowerShell
   Requires  : PowerShell 5
   .EXAMPLE
   ./
